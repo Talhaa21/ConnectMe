@@ -234,11 +234,6 @@
                         android:text="1 new messages"
                         android:textColor="#808080"
                         android:textSize="12sp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#E0E0E0" />
                 </LinearLayout>
 
 
@@ -248,6 +243,11 @@
                     android:src="@drawable/ic_camera"
                     android:tint="#808080" />
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
 
             <LinearLayout
                 android:layout_width="match_parent"
