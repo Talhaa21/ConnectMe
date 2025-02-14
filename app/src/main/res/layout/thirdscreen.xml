@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/connectme_logo"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Great !"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We’re so excited to get you onboard!"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:hint="Name"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#ACACAD"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:hint="Username"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#ACACAD"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:hint="Phone Number"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#ACACAD"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:hint="Email"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#ACACAD"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:hint="Password"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#ACACAD"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="By clicking Agree and continue below, I agree to "
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terms of service and Privacy and Policy"
+        android:layout_marginLeft="20dp"
+        android:textColor="#59442F"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#59442F"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ?"
+            android:layout_marginLeft="120dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="#59442F"
+            android:layout_marginLeft="300dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+
