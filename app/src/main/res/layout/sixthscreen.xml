@@ -168,10 +168,8 @@
 
         <!-- Typing EditText -->
         <EditText
-            android:id="@+id/typingEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toStartOf="@id/sendButton"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
