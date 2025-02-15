@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="20dp">
+
+        <!-- User Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Profile"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+
+        <!-- Edit Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_pencil"
+            android:contentDescription="Edit"
+            android:outlineAmbientShadowColor="#acacad"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/talha"
+            android:layout_marginLeft="102dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Talha Zahoor"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Just me and nature"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="#000000"/>
+
+    <!-- Statistics -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <!-- Posts -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posts"
+                android:textSize="14dp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <!-- Followers -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:textSize="14dp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <!-- Following -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                android:textSize="14dp"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!-- Grid of Images -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="3"
+            android:padding="4dp">
+
+            <!-- Image 1 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile1"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 2 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile2"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 3 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile3"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 4 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile4"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 5 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile5"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 6 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile6"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 7 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile7"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 8 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile8"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 9 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile9"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 10 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile10"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 11 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile11"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Image 12 -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile12"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop" />
+
+        </GridLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFF"
+        android:padding="8dp">
+
+        <!-- Home Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                android:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Search Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search"
+                android:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Add Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_add"
+                android:background="@drawable/circle_background_brown" />
+
+        </LinearLayout>
+
+        <!-- Profile Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"
+                android:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Contacts Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_contacts"
+                android:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contacts"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
