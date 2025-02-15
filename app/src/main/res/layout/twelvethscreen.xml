@@ -263,7 +263,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/sangi"
+                    android:src="@drawable/sangi6"
                     android:scaleType="centerCrop"
                     android:background="@drawable/circle_background"
                     android:clipToOutline="true" />
@@ -497,7 +497,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/sangi4"
+                    android:src="@drawable/sangi6"
                     android:scaleType="centerCrop"
                     android:background="@drawable/circle_background"
                     android:clipToOutline="true" />
