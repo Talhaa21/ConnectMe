@@ -43,7 +43,7 @@
         android:textSize="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
-        android:textColor="#000000" />
+        android:textColor="#59442f" />
 
     <!-- Search Bar -->
     <LinearLayout
@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:hint="Search"
+            android:hint="Search for Friends"
             android:textColor="#000000"
             android:textColorHint="#808080"
             android:textSize="14dp"
@@ -75,12 +75,21 @@
     <!-- DMs List -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="In Contacts"
+                android:textColor="#59442f"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
 
             <!-- DM Item -->
             <LinearLayout
@@ -112,28 +121,14 @@
                         android:textColor="#000000"
                         android:textSize="14dp"
                         android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2 new messages"
-                        android:textColor="#808080"
-                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_camera"
-                    android:tint="#808080" />
+                    android:src="@drawable/ic_edit"
+                    android:tint="#000000" />
             </LinearLayout>
-
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#E0E0E0" />
 
             <!-- DM Item -->
             <LinearLayout
@@ -163,7 +158,8 @@
                         android:layout_height="wrap_content"
                         android:text="Ayesha"
                         android:textColor="#000000"
-                        android:textSize="14sp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
 
 
                 </LinearLayout>
@@ -171,15 +167,9 @@
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_camera"
-                    android:tint="#808080" />
+                    android:src="@drawable/ic_edit"
+                    android:tint="#000000" />
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#E0E0E0" />
-
             <!-- DM Item -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -210,28 +200,15 @@
                         android:textColor="#000000"
                         android:textSize="14dp"
                         android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1 new messages"
-                        android:textColor="#808080"
-                        android:textSize="12sp" />
                 </LinearLayout>
 
 
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_camera"
-                    android:tint="#808080" />
+                    android:src="@drawable/ic_edit"
+                    android:tint="#000000"  />
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#E0E0E0" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -261,25 +238,145 @@
                         android:textColor="#000000"
                         android:textSize="14dp"
                         android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1 new messages"
-                        android:textColor="#808080"
-                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_camera"
-                    android:tint="#808080" />
+                    android:src="@drawable/ic_edit"
+                    android:tint="#000000" />
             </LinearLayout>
-            <View
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#E0E0E0" />
+                android:layout_height="wrap_content"
+                android:text="Invite New Friends"
+                android:textColor="#59442f"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- First User Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sangi6"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Amy Wesley"
+                        android:textSize="16dp"
+                        android:textColor="#000000"
+                        android:paddingStart="12dp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite"
+                        android:textSize="14dp"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#5C4033"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+                </LinearLayout>
+
+                <!-- Second User Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sangi"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_background"
+                        android:clipToOutline="true"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Laura Ryan"
+                        android:textSize="16dp"
+                        android:textColor="#000000"
+                        android:paddingStart="12dp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#5C4033"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+                </LinearLayout>
+
+                <!-- Third User Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/sangi3"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_background"
+                        android:clipToOutline="true"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Christopher"
+                        android:textSize="16dp"
+                        android:textColor="#000000"
+                        android:paddingStart="12dp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#5C4033"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
+
+
+
     </ScrollView>
 </LinearLayout>

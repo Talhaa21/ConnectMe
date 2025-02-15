@@ -8,6 +8,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Change the layout to secondscreen.xml
-        setContentView(R.layout.seventeenthscreen)
+        setContentView(R.layout.eighteenthscreen)
     }
 }
