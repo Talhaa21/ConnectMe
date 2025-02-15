@@ -48,18 +48,18 @@
             android:layout_weight="1"
             android:text="400 Followers"
             android:textSize="20dp"
-            android:textStyle="bold"
             android:gravity="center"
-            android:textColor="#000000" />
+            android:textColor="#808080" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="387 Following"
-            android:textSize="16sp"
+            android:textSize="20dp"
             android:gravity="center"
-            android:textColor="#808080" />
+            android:textStyle="bold"
+            android:textColor="#000000" />
     </LinearLayout>
 
     <!-- Search Bar -->
