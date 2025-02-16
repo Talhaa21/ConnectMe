@@ -5,17 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    android:padding="16dp">
+    android:padding="20dp">
 
     <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:padding="20dp">
 
         <!-- Back Icon -->
         <ImageView
+            android:id="@+id/back"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_back" />
@@ -157,6 +159,16 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/vanishmode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turn on Vanish mode"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"/>
 
     <!-- Typing Section -->
     <RelativeLayout

@@ -26,10 +26,10 @@
 
         <!-- Send Icon -->
         <ImageView
-            android:layout_width="24dp"
+            android:id="@+id/chats"
+            android:layout_width="20dp"
             android:layout_height="24dp"
-            android:src="@drawable/send"
-            />
+            android:src="@drawable/send" />
     </LinearLayout>
 
     <TextView

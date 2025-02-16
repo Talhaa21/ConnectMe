@@ -5,17 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#313133"
-    android:padding="16dp">
+    android:padding="30dp">
 
     <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:padding="20dp">
 
         <!-- Back Icon -->
         <ImageView
+            android:id="@+id/backtosixthscreen"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_back_vanish"

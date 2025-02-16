@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Back Icon -->
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_cross"
+            android:contentDescription="Back"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New post"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <!-- Next Button -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textSize="16dp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- Main Image  -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/main"
+        android:scaleType="centerCrop"/>
+
+    <!-- Bottom Gallery Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginTop="10dp">
+
+        <!-- Recents Dropdown -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recents"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:paddingEnd="8dp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <!-- Image Grid -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <!-- Grid of Images -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="3"
+                android:padding="4dp">
+
+                <!-- Image 1 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile1"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 2 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile2"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 3 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile3"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 4 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile4"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 5 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile5"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 6 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile6"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 7 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile7"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 8 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile8"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 9 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile9"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 10 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile10"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 11 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile11"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+                <!-- Image 12 -->
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile12"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop" />
+
+            </GridLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

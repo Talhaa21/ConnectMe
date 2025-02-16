@@ -95,6 +95,7 @@
         android:textStyle="bold"/>
 
     <Button
+        android:id="@+id/registersuccessfull"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#59442F"
@@ -119,6 +120,7 @@
             android:text="Already have an account ?"
             android:layout_marginLeft="120dp"/>
         <TextView
+            android:id="@+id/gotologin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
