@@ -103,6 +103,7 @@
             android:layout_marginHorizontal="16dp">
 
             <TextView
+                android:id="@+id/followers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="500"
@@ -127,6 +128,7 @@
             android:layout_marginHorizontal="16dp">
 
             <TextView
+                android:id="@+id/following"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="300"
@@ -272,6 +274,7 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/gotohome"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_home"
@@ -295,6 +298,7 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/gotosearch"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_search"
@@ -318,6 +322,7 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/newpost"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/ic_add"
@@ -357,6 +362,7 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/gotocontacts"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_contacts"

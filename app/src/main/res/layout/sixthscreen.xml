@@ -36,12 +36,14 @@
 
         <!-- Icons -->
         <ImageView
+            android:id="@+id/voicecall"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_call"
             android:layout_marginEnd="16dp" />
 
         <ImageView
+            android:id="@+id/vediocall"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_vediocall" />
