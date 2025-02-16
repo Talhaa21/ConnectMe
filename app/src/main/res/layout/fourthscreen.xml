@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My Profile"
+            android:text="My Community"
             android:textColor="#000000"
             android:textSize="30dp"
             android:textStyle="bold"/>
@@ -28,8 +28,8 @@
         <!-- Send Icon -->
         <ImageView
             android:id="@+id/chats"
-            android:layout_width="20dp"
-            android:layout_height="24dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/send" />
     </LinearLayout>
 
@@ -150,7 +150,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/sangi4"
+                    android:src="@drawable/sangi"
                     android:scaleType="centerCrop"
                     android:background="@drawable/circle_background"
                     android:clipToOutline="true" />
@@ -159,7 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Emily James"
+                    android:text="John Doe"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="#000000" />
@@ -177,7 +177,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                android:src="@drawable/sangi4"
+                android:src="@drawable/main"
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="10dp" />
 
@@ -221,7 +221,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Emily James Had a great hike across this beautiful landscape ❤️🎵🌄"
+                android:text="John Doe Had a great hike across this beautiful landscape ❤️🎵🌄"
                 android:textColor="#000000" />
 
             <LinearLayout
@@ -350,7 +350,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_home"
-                android:tint="@android:color/darker_gray" />
+                android:tint="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"

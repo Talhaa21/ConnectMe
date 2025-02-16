@@ -27,6 +27,7 @@
 
         <!-- Edit Icon -->
         <ImageView
+            android:id="@+id/editprofile"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_pencil"
@@ -342,7 +343,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_profile"
-                android:tint="@android:color/darker_gray" />
+                android:tint="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"

@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
         val newPostImage = findViewById<ImageView>(R.id.newpost)
         newPostImage.setOnClickListener {
-            showSeventeenthScreen()
+            showFifteenthScreen()
         }
     }
 
@@ -187,9 +187,15 @@ class MainActivity : AppCompatActivity() {
 
         val newPostImage = findViewById<ImageView>(R.id.newpost)
         newPostImage.setOnClickListener {
-            showSeventeenthScreen()
+            showFifteenthScreen()
+        }
+
+        val goToEditProfile = findViewById<ImageView>(R.id.editprofile)
+        goToEditProfile.setOnClickListener {
+            showThirteenthScreen()
         }
     }
+
 
     // Function to show the eleventh screen (Followers)
     private fun showEleventhScreen() {
@@ -254,5 +260,46 @@ class MainActivity : AppCompatActivity() {
             showFourthScreen()
         }
     }
+
+    // Function to show the fifteenth screen
+    private fun showFifteenthScreen() {
+        setContentView(R.layout.fifteenthscreen)
+
+        val openCamera = findViewById<ImageView>(R.id.opencamera)
+        val goToHome = findViewById<ImageView>(R.id.gotohome)
+
+        openCamera.setOnClickListener {
+            showSixteenthScreen()
+        }
+
+        goToHome.setOnClickListener {
+            showFourthScreen()
+        }
+    }
+
+
+    // Function to show the sixteenth screen
+    private fun showSixteenthScreen() {
+        setContentView(R.layout.sixteenthscreen)
+
+        val goToHome = findViewById<ImageView>(R.id.gotohome)
+
+        goToHome.setOnClickListener {
+            showFourthScreen()
+        }
+    }
+
+    // Function to show the thirteenth screen (Edit Profile)
+    private fun showThirteenthScreen() {
+        setContentView(R.layout.thirteenthscreen)
+
+        val goToProfile = findViewById<TextView>(R.id.gotoprofile)
+
+        goToProfile.setOnClickListener {
+            showTenthScreen()
+        }
+    }
+
+
 
 }

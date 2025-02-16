@@ -30,6 +30,7 @@
 
             <!-- Done Button -->
             <TextView
+                android:id="@+id/gotoprofile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
