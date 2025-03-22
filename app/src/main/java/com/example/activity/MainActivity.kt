@@ -9,6 +9,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import android.widget.Toast
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,35 +59,36 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Function to show the fourth screen
     private fun showFourthScreen() {
-        setContentView(R.layout.fourthscreen)
+        val user = FirebaseAuth.getInstance().currentUser
 
-        val sendImage = findViewById<ImageView>(R.id.chats)
-        sendImage.setOnClickListener {
-            showFifthScreen()
-        }
+        // Delay execution to ensure FirebaseAuth is updated
+        user?.reload()?.addOnCompleteListener {
+            val updatedUser = FirebaseAuth.getInstance().currentUser
+            if (updatedUser != null) {
+                setContentView(R.layout.fourthscreen)
 
-        val searchImage = findViewById<ImageView>(R.id.search)
-        searchImage.setOnClickListener {
-            showFourteenthScreen()
-        }
+                val sendImage = findViewById<ImageView>(R.id.chats)
+                sendImage.setOnClickListener { showFifthScreen() }
 
-        val profileImage = findViewById<ImageView>(R.id.profile)
-        profileImage.setOnClickListener {
-            showTenthScreen()
-        }
+                val searchImage = findViewById<ImageView>(R.id.search)
+                searchImage.setOnClickListener { showFourteenthScreen() }
 
-        val contactsImage = findViewById<ImageView>(R.id.contacts)
-        contactsImage.setOnClickListener {
-            showEighteenthScreen()
-        }
+                val profileImage = findViewById<ImageView>(R.id.profile)
+                profileImage.setOnClickListener { showTenthScreen() }
 
-        val newPostImage = findViewById<ImageView>(R.id.newpost)
-        newPostImage.setOnClickListener {
-            showFifteenthScreen()
+                val contactsImage = findViewById<ImageView>(R.id.contacts)
+                contactsImage.setOnClickListener { showEighteenthScreen() }
+
+                val newPostImage = findViewById<ImageView>(R.id.newpost)
+                newPostImage.setOnClickListener { showFifteenthScreen() }
+
+            } else {
+                Toast.makeText(this, "User not authenticated! Please sign in.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
+
 
     // Function to show the fifth screen
     private fun showFifthScreen() {
