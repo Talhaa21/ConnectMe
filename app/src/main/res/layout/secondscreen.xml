@@ -38,12 +38,12 @@
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
-        android:hint="Username"
+        android:hint="Email"
         android:background="@color/white"
         android:textColor="#000000"
         android:textColorHint="#ACACAD"/>

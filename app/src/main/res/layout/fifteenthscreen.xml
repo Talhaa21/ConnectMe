@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:gravity="center_vertical">
 
         <!-- Back Icon -->
         <ImageView
@@ -20,177 +21,154 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:src="@drawable/ic_cross"
-            android:contentDescription="Back"/>
+            android:contentDescription="Back"
+            android:padding="5dp"/>
 
         <!-- Title -->
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="New post"
-            android:textSize="18dp"
+            android:text="New Post"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#000000"
             android:gravity="center"/>
 
         <!-- Next Button -->
         <TextView
+            android:id="@+id/upload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next"
-            android:textSize="16dp"
-            android:textColor="#000000"/>
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:padding="5dp"/>
     </LinearLayout>
 
-    <!-- Main Image  -->
+    <!-- Main Image View (To Be Replaced on Selection) -->
     <ImageView
+        android:id="@+id/mainImageView"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/main"
-        android:scaleType="centerCrop"/>
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Select & Upload Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/selectImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Image"/>
+    </LinearLayout>
 
     <!-- Bottom Gallery Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp"
-        android:layout_marginTop="10dp">
+        android:padding="8dp">
 
         <!-- Recents Dropdown -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Recents"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textColor="#000000"
-                android:paddingEnd="8dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"/>
+                android:paddingStart="10dp"/>
 
             <ImageView
                 android:id="@+id/opencamera"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_camera"
-                android:backgroundTint="#000000"/>
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_camera"
+                android:tint="#000000"
+                android:padding="5dp"/>
         </LinearLayout>
 
         <!-- Image Grid -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_marginTop="10dp">
 
-            <!-- Grid of Images -->
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:columnCount="3"
                 android:padding="4dp">
 
-                <!-- Image 1 -->
+                <!-- Image Thumbnails (Replace these with dynamic images) -->
                 <ImageView
+                    android:id="@+id/image1"
                     android:layout_width="110dp"
                     android:layout_height="120dp"
                     android:src="@drawable/profile1"
                     android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"/>
 
-                <!-- Image 2 -->
                 <ImageView
+                    android:id="@+id/image2"
                     android:layout_width="110dp"
                     android:layout_height="120dp"
                     android:src="@drawable/profile2"
                     android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"/>
 
-                <!-- Image 3 -->
                 <ImageView
+                    android:id="@+id/image3"
                     android:layout_width="110dp"
                     android:layout_height="120dp"
                     android:src="@drawable/profile3"
                     android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"/>
 
-                <!-- Image 4 -->
                 <ImageView
+                    android:id="@+id/image4"
                     android:layout_width="110dp"
                     android:layout_height="120dp"
                     android:src="@drawable/profile4"
                     android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"/>
 
-                <!-- Image 5 -->
                 <ImageView
+                    android:id="@+id/image5"
                     android:layout_width="110dp"
                     android:layout_height="120dp"
                     android:src="@drawable/profile5"
                     android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"/>
 
-                <!-- Image 6 -->
                 <ImageView
+                    android:id="@+id/image6"
                     android:layout_width="110dp"
                     android:layout_height="120dp"
                     android:src="@drawable/profile6"
                     android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
-
-                <!-- Image 7 -->
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/profile7"
-                    android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
-
-                <!-- Image 8 -->
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/profile8"
-                    android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
-
-                <!-- Image 9 -->
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/profile9"
-                    android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
-
-                <!-- Image 10 -->
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/profile10"
-                    android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
-
-                <!-- Image 11 -->
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/profile11"
-                    android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
-
-                <!-- Image 12 -->
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/profile12"
-                    android:layout_margin="4dp"
-                    android:scaleType="centerCrop" />
-
+                    android:scaleType="centerCrop"/>
             </GridLayout>
         </ScrollView>
     </LinearLayout>

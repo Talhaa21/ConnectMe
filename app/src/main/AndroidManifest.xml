@@ -26,14 +26,6 @@
             </intent-filter>
         </activity>
 
-        <!-- SignIn Activity for Firebase Authentication -->
-        <activity
-            android:name=".SignInActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".SignUpActivity"
-            android:exported="false" />
 
     </application>
 

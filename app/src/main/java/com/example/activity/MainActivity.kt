@@ -11,17 +11,23 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import android.widget.Toast
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
+import android.widget.EditText
+
+
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Set first screen layout (activity_main.xml)
+        auth = FirebaseAuth.getInstance()
         setContentView(R.layout.activity_main)
 
-        // Delay for 5 seconds, then switch to second screen
         Handler(Looper.getMainLooper()).postDelayed({
             showSecondScreen()
         }, 5000) // 5 seconds delay
@@ -31,11 +37,15 @@ class MainActivity : AppCompatActivity() {
     private fun showSecondScreen() {
         setContentView(R.layout.secondscreen)
 
-        val loginSuccessfulButton = findViewById<Button>(R.id.loginsuccessful)
+        val emailField = findViewById<EditText>(R.id.email)
+        val passwordField = findViewById<EditText>(R.id.password)
+        val loginButton = findViewById<Button>(R.id.loginsuccessful)
         val goToRegisterText = findViewById<TextView>(R.id.gotoregister)
 
-        loginSuccessfulButton.setOnClickListener {
-            showFourthScreen()
+        loginButton.setOnClickListener {
+            val email = emailField.text.toString().trim()
+            val password = passwordField.text.toString().trim()
+            loginUser(email, password)
         }
 
         goToRegisterText.setOnClickListener {
@@ -47,47 +57,86 @@ class MainActivity : AppCompatActivity() {
     private fun showThirdScreen() {
         setContentView(R.layout.thirdscreen)
 
+        val emailField = findViewById<EditText>(R.id.email)
+        val passwordField = findViewById<EditText>(R.id.password)
+        val registerButton = findViewById<Button>(R.id.registersuccessfull)
         val goToLoginText = findViewById<TextView>(R.id.gotologin)
-        val registerSuccessfulButton = findViewById<Button>(R.id.registersuccessfull)
+
+        registerButton.setOnClickListener {
+            val email = emailField.text.toString().trim()
+            val password = passwordField.text.toString().trim()
+            registerUser(email, password)
+        }
 
         goToLoginText.setOnClickListener {
             showSecondScreen()
         }
-
-        registerSuccessfulButton.setOnClickListener {
-            showFourthScreen()
-        }
     }
 
-    private fun showFourthScreen() {
-        val user = FirebaseAuth.getInstance().currentUser
+    private fun registerUser(email: String, password: String) {
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        // Delay execution to ensure FirebaseAuth is updated
-        user?.reload()?.addOnCompleteListener {
-            val updatedUser = FirebaseAuth.getInstance().currentUser
-            if (updatedUser != null) {
-                setContentView(R.layout.fourthscreen)
-
-                val sendImage = findViewById<ImageView>(R.id.chats)
-                sendImage.setOnClickListener { showFifthScreen() }
-
-                val searchImage = findViewById<ImageView>(R.id.search)
-                searchImage.setOnClickListener { showFourteenthScreen() }
-
-                val profileImage = findViewById<ImageView>(R.id.profile)
-                profileImage.setOnClickListener { showTenthScreen() }
-
-                val contactsImage = findViewById<ImageView>(R.id.contacts)
-                contactsImage.setOnClickListener { showEighteenthScreen() }
-
-                val newPostImage = findViewById<ImageView>(R.id.newpost)
-                newPostImage.setOnClickListener { showFifteenthScreen() }
-
-            } else {
-                Toast.makeText(this, "User not authenticated! Please sign in.", Toast.LENGTH_SHORT).show()
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
+                    showFourthScreen()
+                } else {
+                    Toast.makeText(this, "Registration Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
             }
+    }
+
+    private fun loginUser(email: String, password: String) {
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                    showFourthScreen()
+                } else {
+                    Toast.makeText(this, "Login Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
+    // Function to show the fourth screen
+    private fun showFourthScreen() {
+        setContentView(R.layout.fourthscreen)
+
+        val sendImage = findViewById<ImageView>(R.id.chats)
+        sendImage.setOnClickListener {
+            showFifthScreen()
+        }
+
+        val searchImage = findViewById<ImageView>(R.id.search)
+        searchImage.setOnClickListener {
+            showFourteenthScreen()
+        }
+
+        val profileImage = findViewById<ImageView>(R.id.profile)
+        profileImage.setOnClickListener {
+            showTenthScreen()
+        }
+
+        val contactsImage = findViewById<ImageView>(R.id.contacts)
+        contactsImage.setOnClickListener {
+            showEighteenthScreen()
+        }
+
+        val newPostImage = findViewById<ImageView>(R.id.newpost)
+        newPostImage.setOnClickListener {
+            showFifteenthScreen()
         }
     }
+
 
 
     // Function to show the fifth screen
@@ -302,6 +351,25 @@ class MainActivity : AppCompatActivity() {
         goToProfile.setOnClickListener {
             showTenthScreen()
         }
+    }
+
+
+    private fun loadStories() {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        val databaseRef = FirebaseDatabase.getInstance().reference.child("Stories").child(userId)
+
+        databaseRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val storiesList = mutableListOf<String>()
+                for (storySnapshot in snapshot.children) {
+                    val imageUrl = storySnapshot.child("imageUrl").value.toString()
+                    storiesList.add(imageUrl)
+                }
+                // Update RecyclerView with storiesList
+            }
+
+            override fun onCancelled(error: DatabaseError) {}
+        })
     }
 
 

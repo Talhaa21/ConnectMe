@@ -65,6 +65,7 @@
                     android:clipToOutline="true" />
 
                 <ImageView
+                    android:id="@+id/addstory"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="bottom|end"
