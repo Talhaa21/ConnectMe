@@ -48,7 +48,7 @@
 
     <!-- Main Image View (To Be Replaced on Selection) -->
     <ImageView
-        android:id="@+id/mainImageView"
+        android:id="@+id/selectedImageView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
@@ -69,6 +69,8 @@
             android:layout_height="wrap_content"
             android:text="Select Image"
             android:layout_marginEnd="10dp"/>
+
+
 
         <Button
             android:id="@+id/uploadButton"

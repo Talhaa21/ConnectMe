@@ -1,8 +1,10 @@
 package com.example.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -319,10 +321,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.fifteenthscreen)
 
         val openCamera = findViewById<ImageView>(R.id.opencamera)
-        val goToHome = findViewById<ImageView>(R.id.gotohome)
 
         openCamera.setOnClickListener {
             showSixteenthScreen()
+        }
+
+        setContentView(R.layout.fifteenthscreen)
+
+        val selectImageButton = findViewById<Button>(R.id.selectImageButton)
+        val imageView = findViewById<ImageView>(R.id.selectedImageView)
+        val goToHome = findViewById<ImageView>(R.id.gotohome)
+
+        selectImageButton.setOnClickListener {
+            openGallery()
         }
 
         goToHome.setOnClickListener {
@@ -371,7 +382,21 @@ class MainActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {}
         })
     }
+    private val PICK_IMAGE_REQUEST = 1
+    private fun openGallery() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        startActivityForResult(intent, PICK_IMAGE_REQUEST)
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+            val selectedImageUri = data.data
+            val imageView = findViewById<ImageView>(R.id.selectedImageView)
+            imageView.setImageURI(selectedImageUri)
+        }
+    }
 
 
 }
