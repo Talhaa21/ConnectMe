@@ -1,4 +1,4 @@
-package com.yourname.rollnumber.models;
+package com.umarfarooq.i210497.models;
 
 import java.util.HashMap;
 import java.util.Map;
