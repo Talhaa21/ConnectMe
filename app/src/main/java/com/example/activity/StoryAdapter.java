@@ -1,4 +1,4 @@
-package com.yourname.rollnumber.adapters;
+package com.umarfarooq.i210497.adapters;
 
 import android.content.Context;
 import android.content.Intent;
