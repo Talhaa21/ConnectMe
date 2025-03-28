@@ -18,6 +18,16 @@ import com.google.firebase.database.*
 import android.widget.EditText
 
 
+// Message data class remains the same
+data class Message(
+    val id: String = "",
+    val senderId: String = "",
+    val text: String = "",
+    val imageUrl: String? = null,
+    val timestamp: Long = System.currentTimeMillis(),
+    val isVanishMode: Boolean = false,
+    var isDeleted: Boolean = false
+)
 
 
 class MainActivity : AppCompatActivity() {
@@ -351,7 +361,11 @@ class MainActivity : AppCompatActivity() {
         goToHome.setOnClickListener {
             showFourthScreen()
         }
+
+
     }
+
+
 
     // Function to show the thirteenth screen (Edit Profile)
     private fun showThirteenthScreen() {
