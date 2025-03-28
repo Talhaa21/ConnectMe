@@ -412,5 +412,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        val userId = auth.currentUser?.uid
+        if (userId != null) {
+            FirebaseDatabase.getInstance().getReference("users").child(userId).child("status")
+                .setValue("offline")
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val userId = auth.currentUser?.uid
+        if (userId != null) {
+            FirebaseDatabase.getInstance().getReference("users").child(userId).child("status")
+                .setValue("online")
+        }
+    }
+
+
 
 }
